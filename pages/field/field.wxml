@@ -1,0 +1,91 @@
+<!--pages/field/field.wxml-->
+<view class='control'>
+<view class='field'>
+  <view class='field_title'>
+    <view class='field_titles'>{{field_title}}</view>
+  </view>
+  <view class='make'>
+   <scroll-view scroll-x>
+    <view class='discon'>
+    <view class='datas' wx:for='{{dataweek}}' data-index='{{index}}' bindtap='clickdatastime'>
+        <view class='datas_week'>{{item.weekName}}</view>
+        <view class="datas_time{{item.dateName == changetimes?'active':''}}">{{item.dateName}}</view>
+        <view class='datas_num'>{{item.dateCount}}场</view>
+      </view>
+    </view> 
+  </scroll-view>
+  <!-- 片场 -->
+  <view class='locationlist'>
+    <view class='location'>片场</view>
+    <scroll-view scroll-x>
+      <view class='locationh'>
+        <view class='locationh_list' wx:for='{{pianchangdatelist}}' bindtap='clicklocation' data-location='{{item.vName}}'  data-index='{{index}}'>
+         <view data-hi='{{item.vName}}'>
+             <view class="locationh_list_hao{{item.vName == loctionfield?'active':''}}">{{item.vName}}
+              </view>
+              <view class='locationh_list_chang'>{{item.pianchangCount}}场</view>
+         </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 时间和价格 -->
+     <checkbox-group bindchange="checkboxChange">
+          <label class="{{item.checked ?'checkbox checked':'checkbox'}} {{item.isYuYue!=1 ? 'nochecked':''}}" wx:for="{{field_pri_list}}" wx:key="{{item.betTime}}">
+            <view class="weui-cell__hd">
+              <checkbox wx:if="{{item.isYuYue==1}}" value="{{item.pid}}"  checked="{{item.checked}}"/>
+              <checkbox wx:else value="{{item.pid}}" disabled='true'  checked="{{item.checked}}"/>
+            </view>
+            <view class="weui-cell__bd">{{item.betTime}}</view>
+            <view class="weui-cell__bd">{{item.price}}元</view>
+          </label>
+      </checkbox-group>
+  </view>
+  </view>
+
+<view class='infor'>
+    <view class='field_title'>
+      <view class='field_titles'>预约信息</view>
+    </view>
+    <view class='infor_list'>
+      <view class='venue'><text decode="true">场&emsp;&emsp;馆:</text></view>
+      <view class='infor_list_field'>{{inforfield}}</view>
+    </view>
+    <view class='infor_list'>
+      <view class='venue'>预约时间:</view>
+      <view class='infor_list_field'>{{fieldtime}}</view>
+    </view>
+    <view class='infor_list'>
+      <view class='venue'><text decode="true">片&emsp;&emsp;场:</text></view>
+      <view class='infor_list_field'>{{loctionfield}}</view>
+    </view>
+    <view class='infor_list'>
+      <view class='venue'>预约时段:</view>
+      <view class='infor_list_field'>{{infortime}}</view>
+    </view>
+    <view class='infor_list'>
+      <view class='venue'><text decode="true">总&emsp;&emsp;价:</text></view>
+      <view class='infor_list_field'>{{inforpri}}</view>
+    </view>
+    <view class='but'>
+      <view class='but_apply' bindtap='but_apply'>提交预约申请</view>
+    </view>
+</view>
+<!-- 确认个人信息 -->
+<view class='infor_but' hidden='{{infor_but}}'>
+  <view class='infor_but_k'>
+    <view class='infor_but_none' bindtap='infor_but_m'>X</view>
+    <view class='infor_but_k_title'>确认个人信息</view>
+    <view class='infor_but_k_name'>
+      <text decode="true">姓&emsp;&emsp;名:</text>
+      <input type='text' value='' bindblur='urername'></input>
+    </view>
+    <view class='infor_but_k_name'>
+      <text>手机号码:</text>
+      <input type='text' value='' maxlength='11' bindblur='usertal'></input>
+    </view>
+    <view wx:if="{{checkedcheck==1}}" class='infor_but_k_confirm' bindtap='confirm'>确认</view>
+    <view wx:else class='infor_but_k_confirmfalse' bindtap='confirm'>确认</view>
+  </view>
+</view>
+</view> 

@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<view class='control'>
+  <view class='top_bg'>
+    <image src='/pages/image/mutopbg.png'></image>
+  </view>
+  <view class='body_con'>
+    <view class='idxtop_img'>
+      <image src='/pages/image/maketop.png'></image>
+    </view>
+     <view class='jianshiquan'>
+     
+    
+     <title class='tstitle2'>
+     <!-- 为全力做好新型冠状病毒感染肺炎防治工作，有效切断病毒传播途径。浙江省全民健身中心所有场馆暂停开放。敬请谅解。-->
+<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>疫情期间场馆人数安排：
+篮球馆半场/每个场次6-8人,
+羽毛球每个场次/一片场地3人 只能单打,
+室外网球每个场次/一片场地4人,
+乒乓球一张桌子3人,
+大足球一个场次20人, 
+笼式足球一个场次10人。
+
+     </title>
+    <title class='tstitle2'>
+     <!-- 为全力做好新型冠状病毒感染肺炎防治工作，有效切断病毒传播途径。浙江省全民健身中心所有场馆暂停开放。敬请谅解。-->
+<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>入场要求：1.入场前出示健康码，进行体温检测，体温正常进行实名登记。
+2.对场馆人数进行控制，如人数超员，请返回场外等待，待场内人员离场后，场外等待人员方可入场。
+3.疫情健身期间，不聚集，不扎堆，确保人与人之间保持安全距离。
+4.疫情期间所有培训机构.个人培训机构不允使用。谢谢配合。
+以上要求请广大健身爱好者，严格遵守，服从场馆工作人员安排。
+
+     </title>
+    
+    最终解释权归浙江省全民健身中心
+     <title class='tstitle'>场地预约特殊须知</title>
+     </view>
+    <view class='newsbox'>
+    <view class='newscontent' wx:for='{{newslist}}'>{{item.id}}.{{item.title}}</view>
+    </view>
+    <!-- 
+    <view class='make_chang'>
+      <view class='make_chang_img'>
+        <image src='/pages/image/makechangdi.png'></image>
+      </view>
+    </view>
+   
+    <view class='make_con_img'>
+      <image src='/pages/image/makeconimg.png'></image>
+    </view>
+    <view class='make_go_other'>
+      <image src='/pages/image/makegoother.png'></image>
+    </view>
+     -->
+    <!-- 场地 -->
+    <view class='make_cate'>
+     <scroll-view scroll-x>
+       <view class='cate'>
+        <view class="catelist{{item.name == changcatenames?'checked':''}}"  wx:for='{{catelist}}' bindtap='clickcate' data-index='{{index}}' wx:key='*this'>
+          {{item.name}}
+        </view>
+      </view>
+     </scroll-view>
+      <view class='makefield'>
+        <view class='makefieldlist' wx:for='{{makefieldlist}}' wx:key='*this'>
+          <image src='{{item.url}}'></image>
+          <view class='makefieldlist_field'>
+            <text class='makefieldlist_field1'>{{item.name}}</text>
+            <!-- <text class='makefieldlist_field2'>{{item.groups}}</text> -->
+          </view>
+          <view class='makefieldlist_make' bindtap='tofield' data-index='{{index}}'>预约</view>
+        </view>
+      </view>
+    </view>
+    <view class='make_button'>
+      <view class='make_button1'>地址：浙江省杭州市下城区体育场路153号</view>
+      <view class='make_button2'>客服热线：0571-85191653</view>
+    </view>
+  </view>
+</view>

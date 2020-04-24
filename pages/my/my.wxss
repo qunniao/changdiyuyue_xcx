@@ -1,0 +1,139 @@
+/* pages/my/my.wxss */
+page{
+  background: #F8F8F8;
+  text-align: center;
+}
+.top_bg{
+  width: 100%;
+  height: 400rpx;
+  opacity: 0.8;
+  border-radius: 0 0 10% 10%;
+  position: fixed;
+  top: 0
+}
+.top_bg image{
+  width: 100%;
+}
+.make{
+  width: 95%;
+  margin: 0 2.5%;
+  border-radius: 20rpx;
+  background: #FFFFFF;
+  position: absolute;
+  top: 200rpx;
+}
+.my_photo{
+  border-radius: 50%;
+  /* width: 100%;
+  height: 100%; */
+  width: 150rpx;
+  height: 150rpx;
+  border: 2rpx solid #6495ED;
+}
+.my_tou{
+  width: 750rpx;
+  text-align: center;
+  position: relative;
+  top: -75rpx;
+}
+
+.nicknames{
+  display: block;
+   width: 460rpx;
+  max-width: 460rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all; /* 追加这一行代码 */
+  margin: 0 auto;
+  text-align: center;
+}
+.my_name{
+  position: relative;
+  top: -50rpx;
+  font-size: 32rpx;
+}
+.make_list{
+  display: flex;
+  justify-content: center;
+}
+.make_list_none_name{
+  width: 40%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  background: #F8F8F8;
+}
+.make_list_hos_name{
+  width: 40%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  background: #F8F8F8;
+}
+.make_none_list_d_name_show{
+  background: #6495ED;
+  color: #FFFFFF;
+}
+.make_none_list{
+  padding-top: 20rpx;
+}
+.make_none_list_d{
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #F5F5F5;
+}
+.make_none_list_d_name{
+  width: 60%;
+  text-align: left;
+  padding-left: 5%;
+}
+.make_none_list_d_m{
+  width: 40%;
+  text-align: right;
+  padding-right: 5%;
+}
+.make_none_list_d_name_one{
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+.make_none_list_d_name_p{
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #A9A9A9;
+}
+.make_none_list_d_name_time{
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #A9A9A9;
+}
+.make_none_list_d_name_time text{
+  padding-left: 20rpx;
+}
+.make_none_list_d_m_state{
+  font-size: 30rpx;
+  line-height: 100rpx;
+}
+.make_none_list_d_m_name{
+  font-size: 24rpx;
+  line-height: 50rpx;
+  color: #A9A9A9;
+}
+.make_none_list_d_m_name text{
+  padding-left: 10rpx;
+}
+.make_none_list_d_m_state_fail{
+  width: 50%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  background: #0090FF;
+  color: #FFFFFF;
+  font-size: 28rpx;
+  text-align: center;
+  float: right;
+  transform: translate(0,30%)
+}

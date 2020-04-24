@@ -1,0 +1,56 @@
+<!--pages/my/my.wxml-->
+<view class='control'>
+  <view class='top_bg'>
+    <image src='/pages/image/mutopbg.png'></image>
+  </view>
+  <view class='make'>
+  <!-- 上传头像 -->
+    <view class='my_tou' bindtap='myusercon'>
+    <block wx:if="{{!hasUserInfo && canIUse}}">
+      <button class='my_photo'  open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+      <text open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userinfo-nickname">点击登录</text>
+      </block>
+      <block wx:else>
+      <image bindtap="bindViewTap" class="my_photo" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname nicknames">{{userInfo.nickName}}</text>
+    </block>
+    </view>
+    <view class='make_list'>
+    <!-- {{make_none_list_d_name ? 'make_none_list_d_name_show' : ''}} -->
+      <view class="make_list_none_name {{make_none_list_d_name ? 'make_none_list_d_name_show' : ''}}" bindtap='tube'>待到场预约</view>
+      <view class="make_list_hos_name {{make_none_list_d_hos ? 'make_none_list_d_name_show' : ''}}" bindtap='history'>历史预约记录</view>
+    </view>
+    <!-- 历史预约记录 -->
+    <view class='make_none_list' hidden='{{history_list}}'>
+      <view class='make_none_list_d' wx:for='{{make_none_list}}' wx:key='*this'>
+        <view class="make_none_list_d_name">
+          <view class='make_none_list_d_name_one'>{{item.changguan_name}}</view>
+          <view class='make_none_list_d_name_p'>{{item.pianchang_name}}</view>
+          <view class='make_none_list_d_name_time'>{{item.reserveTime}}<text>{{item.betTime}}</text></view>
+        </view>
+        <view class='make_none_list_d_m'>
+          <view wx:if="{{item.type==2}}" class='make_none_list_d_m_state'>预约成功</view>
+          <view wx:elif="{{item.type==3}}" class='make_none_list_d_m_state'>已到场</view>
+          <view wx:else="{{item.type==4}}" class='make_none_list_d_m_state'>预约失败</view>
+          <view class='make_none_list_d_m_name'>{{item.name}}<text>{{item.phone}}</text></view>
+        </view>
+      </view>
+    </view>
+    <!-- 待预约记录 -->
+    <view class='make_none_list' hidden='{{tube_list}}'>
+      <view class='make_none_list_d' wx:for='{{make_tube_list}}' wx:key='*this'>
+        <view class="make_none_list_d_name">
+          <view class='make_none_list_d_name_one'>{{item.changguan_name}}</view>
+          <view class='make_none_list_d_name_p'>{{item.pianchang_name}}</view>
+          <view class='make_none_list_d_name_time'>{{item.reserveTime}}<text>{{item.betTime}}</text></view>
+        </view>
+        <view class='make_none_list_d_m'>
+        <view class='make_none_list_d_m_name'>{{item.name}}<text>{{item.phone}}</text></view>
+          <view class='make_none_list_d_m_state'>
+            <view class='make_none_list_d_m_state_fail' bindtap='makelistnone' data-index='{{index}}'>取消</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
