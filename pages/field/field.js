@@ -56,7 +56,8 @@ Page({
     })
     // 获取场数表
     wx.request({
-      url: 'https://back.zhanchengwlkj.com/atxca/sport/queryVenueALL',
+      //url: 'https://back.zhanchengwlkj.com/atxca/sport/queryVenueALL',
+      url: 'https://admin.zjtyj.cn/sport/queryVenueALL',
       data: {
         type: that.data.typeid
       },
@@ -95,7 +96,8 @@ Page({
   gettimeprice:function(){
     let that = this;
     wx.request({
-      url: 'https://back.zhanchengwlkj.com/atxca/order/querDateNum',
+      //url: 'https://back.zhanchengwlkj.com/atxca/order/querDateNum',
+      url: 'https://admin.zjtyj.cn/order/querDateNum',
       data: {
         times: '' + that.data.fieldtime,
         vid: that.data.getvids
@@ -324,7 +326,8 @@ Page({
       //提交订单数据到后台
 
       wx.request({
-        url: 'https://back.zhanchengwlkj.com/atxca/yuyue/createOrder',
+        //url: 'https://back.zhanchengwlkj.com/atxca/yuyue/createOrder',
+        url: 'https://admin.zjtyj.cn/yuyue/createOrder',
         data: {
           reserveTime: that.data.fieldtime,
           phone: that.data.tal,
@@ -372,7 +375,9 @@ Page({
     console.log("获取30天日期 id:" + that.data.typeid);
     //标记
     wx.request({
-      url: 'https://back.zhanchengwlkj.com/atxca/yuyue/findYuYueDateCount',
+      //url: 'https://back.zhanchengwlkj.com/atxca/yuyue/findYuYueDateCount',
+      url: 'https://admin.zjtyj.cn/yuyue/findYuYueDateCount',
+      //url: 'http://localhost:8080/yuyue/findYuYueDateCount',
       data: {
         id: that.data.typeid
       },
@@ -382,7 +387,8 @@ Page({
       },
       success: function (lres) {
         console.log("获取30天日期:");
-        console.log("lres");
+        console.log("lres id:"+that.data.typeid);
+        console.log(lres);
         if (lres.data.code == 200) {
           that.setData({
             changetimes: lres.data.payload[0].dateName,
@@ -412,7 +418,8 @@ Page({
 
     //标记
     wx.request({
-      url: 'https://back.zhanchengwlkj.com/atxca/yuyue/findYuYuePianChangList',
+      //url: 'https://back.zhanchengwlkj.com/atxca/yuyue/findYuYuePianChangList',
+      url: 'https://admin.zjtyj.cn/yuyue/findYuYuePianChangList',
       data: {
         id: that.data.typeid,
         date: time
@@ -445,7 +452,8 @@ Page({
     let that = this;
     // 获取场数表
     wx.request({
-      url: 'https://back.zhanchengwlkj.com/atxca/sport/queryVenueALL',
+      //url: 'https://back.zhanchengwlkj.com/atxca/sport/queryVenueALL',
+      url: 'https://admin.zjtyj.cn/sport/queryVenueALL',
       data: {
         type: that.data.typeid
       },

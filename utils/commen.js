@@ -5,7 +5,8 @@ module.exports = {
 
 /** 请求函数 */
 function ajax(url, data, successFun, organization) {
-  let basUrl = "https://back.zhanchengwlkj.com/atxca";  //服务器
+  //let basUrl = "https://back.zhanchengwlkj.com/atxca";  //服务器
+  let basUrl = "https://admin.zjtyj.cn";  //服务器
   // let basUrl = "http://danbrown.mynatapp.cc";  //本地
 
   let platformToken = wx.getStorageSync("platformToken");

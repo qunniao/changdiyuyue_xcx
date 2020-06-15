@@ -45,7 +45,8 @@ Page({
       history_list: true
     })
     wx.request({
-      url: 'https://back.zhanchengwlkj.com/atxca/yuyue/findOrderListByWaitAndOpenId',
+      //url: 'https://back.zhanchengwlkj.com/atxca/yuyue/findOrderListByWaitAndOpenId',
+      url: 'https://admin.zjtyj.cn/yuyue/findOrderListByWaitAndOpenId',
       data: {
         openid: wx.getStorageSync('openid')
       },
@@ -78,7 +79,8 @@ Page({
       orderId: orderId
     })
     wx.request({
-      url: 'https://back.zhanchengwlkj.com/atxca/order/approvedFail',
+      //url: 'https://back.zhanchengwlkj.com/atxca/order/approvedFail',
+      url: 'https://admin.zjtyj.cn/order/approvedFail',
       data: {
         orderId: that.data.orderId
       },
@@ -109,7 +111,8 @@ Page({
     })
     
     wx.request({
-      url: 'https://back.zhanchengwlkj.com/atxca/yuyue/findOrderListByOpenId',
+      //url: 'https://back.zhanchengwlkj.com/atxca/yuyue/findOrderListByOpenId',
+      url: 'https://admin.zjtyj.cn/yuyue/findOrderListByOpenId',
       data: {
         openid: wx.getStorageSync('openid')
       },
@@ -151,7 +154,8 @@ Page({
   getOrderlist() {
     var that = this;
     wx.request({
-      url: 'https://back.zhanchengwlkj.com/atxca/yuyue/findOrderListByWaitAndOpenId',
+      //url: 'https://back.zhanchengwlkj.com/atxca/yuyue/findOrderListByWaitAndOpenId',
+      url: 'https://admin.zjtyj.cn/yuyue/findOrderListByWaitAndOpenId',
       data: {
         openid: wx.getStorageSync('openid')
       },
