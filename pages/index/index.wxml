@@ -12,24 +12,22 @@
     
      <title class='tstitle2'>
      <!-- 为全力做好新型冠状病毒感染肺炎防治工作，有效切断病毒传播途径。浙江省全民健身中心所有场馆暂停开放。敬请谅解。-->
-<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>疫情期间场馆人数安排：
-篮球馆半场/每个场次6-8人,
-羽毛球每个场次/一片场地3人 只能单打,
-室外网球每个场次/一片场地4人,
-乒乓球一张桌子3人,
-大足球一个场次20人, 
-笼式足球一个场次10人。
+<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+2020省全民健身中心公益体育夏令营第一期7月13日—7月24日，第二期7月27日—8月7日，周末休息，营期各10天，每天训练时长2小时。
+第一期项目为：篮球、羽毛球、网球、足球、中考体育、形体啦啦操；第二期项目为：乒乓球、击剑、儿童体适能、武术。幼儿园到初中学生都可以根据兴趣，按需选择。
+两期十个项目共推出300个公益名额，报名零费用。
 
      </title>
+     <!--
     <title class='tstitle2'>
-     <!-- 为全力做好新型冠状病毒感染肺炎防治工作，有效切断病毒传播途径。浙江省全民健身中心所有场馆暂停开放。敬请谅解。-->
-<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>入场要求：1.入场前出示健康码，进行体温检测，体温正常进行实名登记。
-2.对场馆人数进行控制，如人数超员，请返回场外等待，待场内人员离场后，场外等待人员方可入场。
-3.疫情健身期间，不聚集，不扎堆，确保人与人之间保持安全距离。
-以上要求请广大健身爱好者，严格遵守，服从场馆工作人员安排。
+    
+<text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
 
      </title>
-    
+     -->
+    <view class='idxtop_img2'>
+      <image src='/pages/image/QQ20200707-0.png'></image>
+    </view>
     最终解释权归浙江省全民健身中心
      <title class='tstitle'>场地预约特殊须知</title>
      </view>
